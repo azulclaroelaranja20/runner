@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://wqvhlmtduhbj"]
+[gd_scene format=3 uid="uid://wqvhlmtduhbj"]
 
 [ext_resource type="Texture2D" uid="uid://cmrdhjrv5nt2a" path="res://background.png" id="1_62e2m"]
 [ext_resource type="Script" uid="uid://b3bi2x00nltff" path="res://control.gd" id="1_qtu10"]
@@ -7,8 +7,8 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ee4bf"]
 texture = ExtResource("1_62e2m")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iy58a"]
-bg_color = Color(0.18542, 0.75782, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbped"]
+bg_color = Color(5.77569e-07, 0.704244, 0.540847, 1)
 border_width_left = 4
 border_width_top = 3
 border_width_right = 5
@@ -39,8 +39,8 @@ shadow_size = 3
 shadow_offset = Vector2(-3, 4)
 anti_aliasing_size = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbped"]
-bg_color = Color(5.77569e-07, 0.704244, 0.540847, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iy58a"]
+bg_color = Color(0.18542, 0.75782, 1, 1)
 border_width_left = 4
 border_width_top = 3
 border_width_right = 5
@@ -56,30 +56,6 @@ shadow_color = Color(6.16074e-06, 0.768425, 0.924371, 1)
 shadow_size = 7
 shadow_offset = Vector2(-3, 4)
 anti_aliasing_size = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
-bg_color = Color(0.990836, 0.420095, 0.528655, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 0.736494, 0.51619, 1)
-border_blend = true
-shadow_color = Color(0.644512, 0.673412, 0, 0.898039)
-shadow_size = 12
-shadow_offset = Vector2(2, 4)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
-bg_color = Color(0.652109, 0.0420061, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.899393, 0.650526, 1.15514e-06, 1)
-border_blend = true
-shadow_color = Color(0.769242, 0.621319, 0, 0.898)
-shadow_size = 12
-shadow_offset = Vector2(2, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62e2m"]
 bg_color = Color(0.91677, 0.079395, 7.70092e-07, 1)
@@ -97,7 +73,31 @@ shadow_color = Color(0.769242, 0.621319, 0, 0.898)
 shadow_size = 12
 shadow_offset = Vector2(2, 4)
 
-[node name="Control" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
+bg_color = Color(0.652109, 0.0420061, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.899393, 0.650526, 1.15514e-06, 1)
+border_blend = true
+shadow_color = Color(0.769242, 0.621319, 0, 0.898)
+shadow_size = 12
+shadow_offset = Vector2(2, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
+bg_color = Color(0.990836, 0.420095, 0.528655, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.736494, 0.51619, 1)
+border_blend = true
+shadow_color = Color(0.644512, 0.673412, 0, 0.898039)
+shadow_size = 12
+shadow_offset = Vector2(2, 4)
+
+[node name="Control" type="Control" unique_id=1773008495]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -106,7 +106,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qtu10")
 
-[node name="fundo" type="Panel" parent="."]
+[node name="fundo" type="Panel" parent="." unique_id=1248118532]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -115,7 +115,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ee4bf")
 
-[node name="título" type="Label" parent="."]
+[node name="título" type="Label" parent="." unique_id=998898188]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -139,7 +139,7 @@ theme_override_fonts/font = ExtResource("2_qtu10")
 theme_override_font_sizes/font_size = 150
 text = "Runner"
 
-[node name="Botões" type="VBoxContainer" parent="."]
+[node name="Botões" type="VBoxContainer" parent="." unique_id=1423016395]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -155,22 +155,22 @@ grow_vertical = 2
 theme_override_constants/separation = 28
 alignment = 1
 
-[node name="jogar" type="Button" parent="Botões"]
+[node name="jogar" type="Button" parent="Botões" unique_id=289982847]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("2_qtu10")
-theme_override_styles/hover = SubResource("StyleBoxFlat_iy58a")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_fj5cn")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kbped")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fj5cn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iy58a")
 text = "Jogar
 "
 
-[node name="sair" type="Button" parent="Botões"]
+[node name="sair" type="Button" parent="Botões" unique_id=2024804098]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_qtu10")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ee4bf")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_qtu10")
 theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qtu10")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ee4bf")
 text = "Sair
 "
 
