@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bpdtauk6mi850"]
+
+[ext_resource type="Texture2D" uid="uid://0w5bcolw2nmv" path="res://Assets Godot Runner/enemies.png" id="1_eb3bm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn3oe"]
+atlas = ExtResource("1_eb3bm")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46d40"]
+atlas = ExtResource("1_eb3bm")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psv3r"]
+atlas = ExtResource("1_eb3bm")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr55p"]
+atlas = ExtResource("1_eb3bm")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkph2"]
+atlas = ExtResource("1_eb3bm")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pstle"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn3oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46d40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psv3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr55p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkph2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Obstáculos" type="Area2D" unique_id=501895340]
+
+[node name="CorpoObstáculos" type="CollisionShape2D" parent="." unique_id=744624860]
+
+[node name="ImagemObstáculos" type="AnimatedSprite2D" parent="." unique_id=1954364993]
+sprite_frames = SubResource("SpriteFrames_pstle")
+frame = 4
+frame_progress = 0.86841756
